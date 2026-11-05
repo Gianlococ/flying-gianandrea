@@ -141,8 +141,7 @@ const SITE = {
     { cat: "Formula Kite", items: [
       { name: "Flysurfer VMG", img: "img/gear_vmg.jpg" },
       { name: "SK Shapes", img: "img/gear_skshapes.jpg" },
-      { name: "Tarifa Foil Boards", img: "img/gear_tarifa.jpg" },
-      { name: "Levitaz R6 Race Series", img: "img/gear_levitazfoil.jpg" } ] },
+      { name: "Tarifa Foil Boards", img: "img/gear_tarifa.jpg" } ] },
     { cat: "Freeride / Big Air", items: [
       { name: "Flysurfer ERA²", img: "img/gear_era.jpg" },
       { name: "Flysurfer SONIC⁵", img: "img/gear_sonic7.jpg" },
@@ -267,9 +266,6 @@ const SITE = {
       { name: "Flysurfer", url: "https://flysurfer.com/", logo: "img/logo_flysurfer.png",
         en: "We are a manufacturer of high-quality Kites & Boards with a strong focus for design, performance and innovation. Whether kitesurfing, snowkiting or landkiting – our goal is to create unique products so that every day really can be a perfect kite day.",
         de: "Wir sind ein Hersteller qualitativ hochwertiger Kites & Boards mit höchsten Ansprüchen an Design, Performance und Innovationskraft. Egal ob Kitesurfen, Snowkiten oder Landkiten – wir wollen einzigartige Produkte kreieren, damit wirklich jeder Tag zum perfekten Kitetag wird." },
-      { name: "Levitaz", url: "https://levitaz.com/", logo: "img/logo_levitaz.png",
-        en: "Levitaz stands for: Hydrofoils made in Austria, over 25 years of expertise in advanced composite materials, 100% in-house development and production, and high-quality manufacturing based on automotive standards.",
-        de: "Levitaz steht für: Hydrofoils made in Austria, mehr als 25 Jahre Erfahrung mit fortschrittlichen Verbundstoffen, 100 % in-house Entwicklung und -Produktion sowie hochwertige Fertigung nach Automotive-Standards." },
       { name: "Schweizer Sporthilfe", url: "https://sporthilfe.ch/", logo: "img/logo_sporthilfe.png",
         en: "For over 50 years, Schweizer Sporthilfe has been committed to providing financial support for performance-oriented young and elite athletes. Competitive athletes and their families face financial challenges, particularly at a young age and in fringe sports or disabled sports, where there is a lack of media coverage, major sponsors and high prize money.",
         de: "Seit über 50 Jahren setzt sich die Schweizer Sporthilfe für die finanzielle Unterstützung von leistungsorientierten Nachwuchs- sowie Eliteathletinnen und-athleten ein. Besonders im Nachwuchsalter und in Randsportarten oder im Behindertensport, wo mediale Präsenz, grosse Sponsoren und hohe Preisgelder fehlen, sind Leistungssportlerinnen und -sportler sowie ihre Familien finanziellen Herausforderungen ausgesetzt." },
@@ -310,7 +306,7 @@ const SITE = {
     ]}
   ],
   /* Logo-Leiste unten auf jeder Seite */
-  logoStrip: ["flysurfer","levitaz","oneill","skshapes","zyc","halle41","prokitesports","hintermann","swisssailing","sst","ska"],
+  logoStrip: ["flysurfer","oneill","skshapes","zyc","halle41","prokitesports","hintermann","swisssailing","sst","ska"],
 
   /* ---------- CONTACT ---------- */
   contact: {
@@ -775,7 +771,7 @@ function render(){
   $("cbg").style.backgroundImage=`url("${SITE.contact.image}")`;
   $("cform").querySelectorAll("[name]").forEach(f=>f.placeholder=t.ph[f.name]);
 
-  const big=["flysurfer","levitaz","oneill","skshapes"];
+  const big=["flysurfer","oneill","skshapes"];
   const all=SITE.partners.flatMap(g=>g.list);
   $("strip").innerHTML=SITE.logoStrip.map(k=>{const p=all.find(x=>x.logo.includes("logo_"+k+"."));return p?`<a href="${esc(p.url)}" target="_blank" rel="noopener"><img class="${big.includes(k)?"big":""}" src="${esc(p.logo)}" alt="${esc(p.name)}"></a>`:""}).join("");
   $("soc").innerHTML=SITE.social.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener" aria-label="${esc(s.name)}"><svg viewBox="0 0 24 24">${SOC[s.icon]||""}</svg></a>`).join("");
