@@ -101,8 +101,19 @@ const SITE = {
       lines: ["🥇 2025 Formula Kite (U19)", "🥇 2024 Formula Kite (U21)", "🥇 2023 KiteFoil (U17)", "🥇 2022 KiteFoil (U17)"] }
   ],
   homeSlider: ["img/p36.jpg","img/p30.jpg","img/p16.jpg","img/p35.jpg","img/p33.jpg","img/p19.jpg","img/p34.jpg","img/p14.jpg"],
-  instagram: ["img/ig1.jpg","img/ig2.jpg","img/ig3.jpg","img/ig4.jpg","img/ig5.jpg","img/ig6.jpg","img/ig7.jpg","img/ig8.jpg","img/ig9.jpg",
-              "img/ig10.jpg","img/ig11.jpg","img/ig12.jpg","img/ig13.jpg","img/ig14.jpg","img/ig15.jpg","img/ig16.jpg","img/ig17.jpg","img/ig18.jpg"],
+  instagram: [
+    { img: "img/ig1.jpg", url: "https://www.instagram.com/kiteclasses/p/De_U06DjrrJ/" },
+    { img: "img/ig2.jpg", url: "https://www.instagram.com/swisssailingteam/p/De9t6X7tyCX/" },
+    { img: "img/ig3.jpg", url: "https://www.instagram.com/srfsport/reel/Dd621PXiCNm/" },
+    { img: "img/ig4.jpg", url: "https://www.instagram.com/flysurferkiteboarding/p/Dd4PCXZjLwC/" },
+    { img: "img/ig5.jpg", url: "https://www.instagram.com/gianstragiotti/p/DdkCmQZjFKp/" },
+    { img: "img/ig6.jpg", url: "https://www.instagram.com/gianstragiotti/p/DdPcwY6jIY8/" },
+    { img: "img/ig7.jpg", url: "https://www.instagram.com/kiteclasses/p/DdMQAgpgHo9/" },
+    { img: "img/ig8.jpg", url: "https://www.instagram.com/kiteclasses/p/DdL6Ys5OlV9/" },
+    { img: "img/ig9.jpg", url: "https://www.instagram.com/gianstragiotti/p/Dcbf8grjKOR/" },
+    { img: "img/ig10.jpg", url: "https://www.instagram.com/kiteclasses/p/DcX6AbTDg5D/" },
+    { img: "img/ig11.jpg", url: "https://www.instagram.com/kiteclasses/p/DcT0FFlDux1/" }
+  ],
 
   /* ---------- ABOUT ---------- */
   about: {
@@ -308,7 +319,7 @@ const SITE = {
     image: "img/p28.jpg"
   },
   social: [
-    { name: "Instagram", icon: "ig", url: "https://www.instagram.com/gian.stragiotti/" },
+    { name: "Instagram", icon: "ig", url: "https://www.instagram.com/gianstragiotti/" },
     { name: "Facebook",  icon: "fb", url: "https://www.facebook.com/flyinggianandrea/" },
     { name: "Vimeo",     icon: "vi", url: "https://vimeo.com/user73326112" },
     { name: "YouTube",   icon: "yt", url: "http://www.youtube.com/@gianandreastragiotti3386" }
@@ -422,6 +433,7 @@ header.solid .burger{color:#fff}
 .insta .grid a::after{content:"";position:absolute;inset:0;background:rgba(var(--teal-rgb),.0);transition:.3s}
 .insta .grid a:hover img{transform:scale(1.08)}
 .insta .grid a:hover::after{background:rgba(var(--teal-rgb),.25)}
+.insta .grid a.igcta{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(255,255,255,.25);color:#fff;text-align:center;padding:10px}.insta .grid a.igcta span{font-size:13px;letter-spacing:.04em;opacity:.85}.insta .grid a.igcta b{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--or)}.insta .grid a.igcta:hover{background:rgba(255,255,255,.06)}
 @media(max-width:760px){.insta .grid{grid-template-columns:repeat(3,1fr)}}
 
 /* strip + footer */
@@ -607,7 +619,7 @@ footer .bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;p
       <div class="ncards" id="ncards"></div>
     </div></div>
     <div class="insta"><div class="wrap">
-      <div class="shead reveal"><div><span class="kick">Instagram</span><h2 class="disp">@gian.stragiotti</h2></div><a class="more" id="iglink" target="_blank" rel="noopener" data-t="follow"></a></div>
+      <div class="shead reveal"><div><span class="kick">Instagram</span><h2 class="disp">@gianstragiotti</h2></div><a class="more" id="iglink" target="_blank" rel="noopener" data-t="follow"></a></div>
       <div class="grid reveal" id="insta"></div>
     </div></div>
   </section>
@@ -684,7 +696,7 @@ const T={
  en:{lines:["Swiss Kiteboarder","European Champion <b>2026</b> · Vice World Champion <b>2026</b>","Road to LA 2028"],home:"Home",news:"News",press:"In the media",pressKick:"Press & TV",latest:"Latest updates",allnews:"All news",about:"About",gear:"Gear",competition:"Competition",partners:"Partners",contact:"Contact",lang:"DE",results:"Results",submit:"Send message",follow:"Follow me",sub:"European Champion 2026 · Vice World Champion 2026 · 4x Youth World Champion · Formula Kite",gearKick:"My equipment",compKick:"Calendar & results",thanks:"Thank you to my partners",getInTouch:"Get in touch",visit:"Visit website",ph:{name:"Name",mail:"E-mail",subject:"Subject",message:"Message"},sent:"Your mail app opens with the message. If not, write to: "},
  de:{lines:["Swiss Kiteboarder","Europameister <b>2026</b> · Vize-Weltmeister <b>2026</b>","Road to LA 2028"],home:"Home",news:"News",press:"In den Medien",pressKick:"Presse & TV",latest:"Neuigkeiten",allnews:"Alle News",about:"Über Mich",gear:"Material",competition:"Wettkämpfe",partners:"Partner",contact:"Kontakt",lang:"EN",results:"Resultate",submit:"Nachricht senden",follow:"Folge mir",sub:"Europameister 2026 · Vize-Weltmeister 2026 · 4x Jugendweltmeister · Formula Kite",gearKick:"Mein Material",compKick:"Kalender & Resultate",thanks:"Danke an meine Partner",getInTouch:"Schreib mir",visit:"Zur Website",ph:{name:"Name",mail:"E-Mail",subject:"Betreff",message:"Nachricht"},sent:"Dein Mailprogramm öffnet sich mit der Nachricht. Falls nicht, schreib an: "}
 };
-const PAGES=["home","news","about","gear","competition","partners","contact"];
+const PAGES=["home","about","competition","news","partners","gear","contact"];
 const ICONS={
  home:'<path d="M12 3 1 12h3v9h6v-6h4v6h6v-9h3z"/>',
  birthday:'<path d="M5 13h14a2 2 0 0 1 2 2v6H3v-6a2 2 0 0 1 2-2zm1-4h2v3H6zm5 0h2v3h-2zm5 0h2v3h-2zM7 4.5c0 1-1 1.5-1 2.5a1 1 0 0 0 2 0c0-1-1-1.5-1-2.5zm5 0c0 1-1 1.5-1 2.5a1 1 0 0 0 2 0c0-1-1-1.5-1-2.5zm5 0c0 1-1 1.5-1 2.5a1 1 0 0 0 2 0c0-1-1-1.5-1-2.5z"/>',
@@ -735,7 +747,7 @@ function render(){
   $("herosub").textContent=t.sub;
   $("titles").innerHTML=SITE.titles.map(x=>`<div class="tgroup"><h2 class="disp">${esc(pick(x.title))}</h2>${x.lines.map(l=>{const c=medalClass(l);const txt=l.replace(/[🥇🥈🥉]/gu,"").trim();return `<div class="medal"><i class="${c}">${c==="g"?1:c==="s"?2:c==="b"?3:""}</i><span>${esc(txt)}</span></div>`}).join("")}</div>`).join("");
   const ig=SITE.social.find(s=>s.icon==="ig");$("iglink").href=ig?ig.url:"#";
-  $("insta").innerHTML=SITE.instagram.map(s=>`<a href="${esc(ig?ig.url:"#")}" target="_blank" rel="noopener"><img src="${esc(s)}" alt=""></a>`).join("");
+  $("insta").innerHTML=SITE.instagram.map(s=>{const im=typeof s==="string"?s:s.img,u=(typeof s==="object"&&s.url)||(ig?ig.url:"#");return `<a href="${esc(u)}" target="_blank" rel="noopener"><img src="${esc(im)}" alt=""></a>`}).join("")+`<a class="igcta" href="${esc(ig?ig.url:"#")}" target="_blank" rel="noopener"><span>@gianstragiotti</span><b>${t.follow||"Follow"} →</b></a>`;
 
   const N=SITE.news||[];
   $("newshome").style.display=N.length?"":"none";
@@ -794,7 +806,7 @@ function slots(){
   sec("News-Beiträge");
   (SITE.news||[]).forEach((n,i)=>add(`News: ${pick(n.title)}`,"Quer",()=>n.image));
   sec("Instagram-Raster (optional)");
-  SITE.instagram.forEach((x,i)=>add(`Instagram ${i+1}/${SITE.instagram.length}`,"Quadrat",()=>SITE.instagram[i]));
+  SITE.instagram.forEach((x,i)=>add(`Instagram ${i+1}/${SITE.instagram.length}`,"Quadrat",()=>SITE.instagram[i].img||SITE.instagram[i]));
   sec("Material (optional, Produktbilder)");
   SITE.gear.forEach(g=>g.items.forEach(it=>add(`${g.cat}: ${it.name}`,"Freigestellt, weisser Hintergrund",()=>it.img)));
   let n=0;
