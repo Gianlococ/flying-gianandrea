@@ -308,7 +308,7 @@ const SITE = {
     image: "img/p28.jpg"
   },
   social: [
-    { name: "Instagram", icon: "ig", url: "https://www.instagram.com/gianstragiotti/" },
+    { name: "Instagram", icon: "ig", url: "https://www.instagram.com/gian.stragiotti/" },
     { name: "Facebook",  icon: "fb", url: "https://www.facebook.com/flyinggianandrea/" },
     { name: "Vimeo",     icon: "vi", url: "https://vimeo.com/user73326112" },
     { name: "YouTube",   icon: "yt", url: "http://www.youtube.com/@gianandreastragiotti3386" }
@@ -316,8 +316,7 @@ const SITE = {
   credit: "Web by Samira Stragiotti"
 };
 /* ===================== ENDE INHALT ===================== */
-</script>
-<style>
+</script><style>
 :root{--teal-rgb:0,61,76;--deep-rgb:6,34,43;--teal:#003d4c;--deep:#06222b;--ink:#0d1b20;--mut:#5f6f75;--line:#e6eaec;--soft:#f4f6f7;--or:#e8963a;--gold:#d4a73a;--silver:#aab4ba;--bronze:#b9774a}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -346,7 +345,7 @@ nav a:hover::after,nav a.on::after{transform:scaleX(1)}
 nav #lang{border:1px solid currentColor;border-radius:30px;padding:5px 12px;margin-left:8px;opacity:.85}
 .burger{display:none;background:none;border:0;font-size:26px;color:#fff;cursor:pointer}
 header.solid .burger{color:#fff}
-@media(max-width:899px){.hero{height:88vh!important;min-height:560px!important}.hero .bg{background-position:44% 40%!important}.hero h1{font-size:30px!important;margin-bottom:12px!important}.hero .lines{font-size:10px!important;letter-spacing:.16em!important}.hero .wrap{padding-bottom:64px!important}}
+@media(max-width:899px){.hero{height:88vh!important;min-height:560px!important}.hero .bg{background-position:44% 40%!important}.hero h1{font-size:35px!important;margin-bottom:12px!important}.hero .lines{font-size:10px!important;letter-spacing:.16em!important}.hero .wrap{padding-bottom:64px!important}}
 @media(max-width:920px){nav{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(var(--deep-rgb),.94);backdrop-filter:blur(14px);flex-direction:column;align-items:stretch;padding:12px 20px 20px;box-shadow:0 12px 30px rgba(0,0,0,.25)}nav a{color:#fff!important}nav.open{display:flex}.burger{display:block}}
 
 .page{display:none}.page.on{display:block;animation:fade .5s ease}
@@ -366,7 +365,7 @@ header.solid .burger{color:#fff}
 @keyframes kb{to{transform:scale(1.07)}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(var(--deep-rgb),.5) 0%,rgba(var(--deep-rgb),0) 22%,rgba(var(--deep-rgb),0) 55%,rgba(var(--deep-rgb),.92) 100%)}
 .hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:84px}
-@media(min-width:900px){.hero{justify-content:flex-end}.hero .wrap{text-align:right;max-width:1280px;margin:0 auto;padding-bottom:70px}.hero h1{font-size:clamp(34px,3.4vw,50px)!important;margin-bottom:14px!important}.hero .lines{font-size:12px!important;line-height:2!important}.hero .bg{background-position:30% 45%}.hero::after{background:linear-gradient(180deg,rgba(var(--deep-rgb),.5) 0%,rgba(var(--deep-rgb),0) 22%,rgba(var(--deep-rgb),0) 50%,rgba(var(--deep-rgb),.9) 100%),linear-gradient(90deg,rgba(var(--deep-rgb),0) 45%,rgba(var(--deep-rgb),.55) 100%)}}
+@media(min-width:900px){.hero{justify-content:flex-end}.hero .wrap{text-align:right;max-width:1280px;margin:0 auto;padding-bottom:70px}.hero h1{font-size:clamp(40px,4vw,60px)!important;margin-bottom:14px!important}.hero .lines{font-size:12px!important;line-height:2!important}.hero .bg{background-position:30% 45%}.hero::after{background:linear-gradient(180deg,rgba(var(--deep-rgb),.5) 0%,rgba(var(--deep-rgb),0) 22%,rgba(var(--deep-rgb),0) 50%,rgba(var(--deep-rgb),.9) 100%),linear-gradient(90deg,rgba(var(--deep-rgb),0) 45%,rgba(var(--deep-rgb),.55) 100%)}}
 .hero h1{font-size:clamp(38px,5vw,70px);font-weight:200;margin:0 0 22px;letter-spacing:.02em}
 .hero h1 span{color:#fff}
 .hero .lines{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.88);line-height:2.1}
@@ -567,7 +566,7 @@ footer .bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;p
 .slot.sec{grid-column:1/-1;background:none;font:600 12px Inter;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);padding:18px 0 0}
 
 /* tiles */
-.tiles{background:var(--deep);padding:90px 0 100px}
+.tiles{background:var(--deep);padding:0 0 110px}
 .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 .tile{position:relative;aspect-ratio:4/5;display:block;clip-path:polygon(14% 0,100% 0,86% 100%,0 100%);overflow:hidden}
 .tile .ti-im{position:absolute;inset:0;background-size:cover;background-position:center;filter:grayscale(1) brightness(.7);transition:transform .8s ease,filter .6s}
@@ -598,17 +597,17 @@ footer .bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;p
       <div class="lines" id="herolines"></div>
       <p class="sub" id="herosub"></p>
     </div><div class="scroll"></div></div>
-    <div class="tiles"><div class="wrap tgrid" id="tiles"></div></div>
     <div class="honours"><div class="wrap hgrid">
       <div id="titles" class="reveal"></div>
       <div class="slider small reveal" data-slides="homeSlider"></div>
     </div></div>
+    <div class="tiles"><div class="wrap tgrid" id="tiles"></div></div>
     <div class="news-home" id="newshome"><div class="wrap">
       <div class="shead reveal"><div><span class="kick" data-t="latest"></span><h2 class="disp">News</h2></div><a class="more" href="#news" data-t="allnews"></a></div>
       <div class="ncards" id="ncards"></div>
     </div></div>
     <div class="insta"><div class="wrap">
-      <div class="shead reveal"><div><span class="kick">Instagram</span><h2 class="disp">@gianstragiotti</h2></div><a class="more" id="iglink" target="_blank" rel="noopener" data-t="follow"></a></div>
+      <div class="shead reveal"><div><span class="kick">Instagram</span><h2 class="disp">@gian.stragiotti</h2></div><a class="more" id="iglink" target="_blank" rel="noopener" data-t="follow"></a></div>
       <div class="grid reveal" id="insta"></div>
     </div></div>
   </section>
