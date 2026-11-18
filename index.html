@@ -524,6 +524,7 @@ footer .bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;p
 .contact textarea{height:140px;resize:vertical}
 .contact button{justify-self:start;margin-top:10px;background:var(--teal);color:#fff;border:0;border-radius:40px;padding:15px 34px;font:600 12px Inter;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:.25s}
 .contact button:hover{background:var(--or)}
+.chero{background:var(--deep);padding:110px 24px 70px;text-align:center}.chero img{display:block;width:100%;max-width:1100px;margin:0 auto;border-radius:6px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}@media(max-width:700px){.chero{padding:90px 14px 40px}}
 .acard{border-bottom:1px solid #e3e8ea;padding:90px 0 100px;text-align:center}.acard h2{margin:10px 0 40px}.acard img{display:block;width:100%;max-width:860px;margin:0 auto;border-radius:6px;box-shadow:0 30px 60px -25px rgba(var(--deep-rgb),.45)}.acard .dl{display:inline-block;margin-top:34px;background:var(--teal);color:#fff;border-radius:40px;padding:15px 34px;font:600 12px Inter;letter-spacing:.18em;text-transform:uppercase;transition:background .2s}.acard .dl:hover{background:var(--or)}
 .note{font-size:13px;color:var(--mut)}
 @media(max-width:860px){.contact{grid-template-columns:1fr;gap:40px}.contact .two{grid-template-columns:1fr}}
@@ -664,10 +665,8 @@ footer .bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;p
 
   <!-- CONTACT -->
   <section class="page" id="p-contact">
-    <div class="phero" id="cbg"><div class="wrap"><span class="kick" data-t="getInTouch"></span><h1 class="disp" data-t="contact"></h1></div></div>
-    <div class="wrap"><div class="acard reveal"><span class="kick" data-t="autoKick"></span><h2 class="disp" data-t="autoTitle"></h2>
-      <img src="img/autogrammkarte.jpg" alt="Autogrammkarte Gian Andrea Stragiotti"></div>
-    <div class="contact">
+    <div class="chero" id="cbg"><img src="img/autogrammkarte.jpg" alt="Gian Andrea Stragiotti – Autogrammkarte"><h1 class="sr" data-t="contact"></h1></div>
+    <div class="wrap"><div class="contact">
       <div class="reveal"><span class="kick">Stragiotti Sports</span><p class="addr" id="addr"></p><a class="mail" id="mail"></a></div>
       <form id="cform" class="reveal">
         <div class="two"><input name="name" required><input name="mail" type="email" required></div>
@@ -765,7 +764,6 @@ function render(){
 
   $("addr").textContent=SITE.contact.address.split("\n").slice(1).join("\n");
   $("mail").textContent=SITE.contact.email;$("mail").href="mailto:"+SITE.contact.email;
-  $("cbg").style.backgroundImage=`url("${SITE.contact.image}")`;
   $("cform").querySelectorAll("[name]").forEach(f=>f.placeholder=t.ph[f.name]);
 
   const big=["flysurfer","oneill","skshapes"];
