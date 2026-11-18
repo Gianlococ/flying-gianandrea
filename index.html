@@ -514,7 +514,7 @@ footer .bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;p
 @media(max-width:820px){.prow{grid-template-columns:1fr;gap:22px}}
 
 /* contact */
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:100px 0 110px;align-items:start}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:100px 0 90px;align-items:start}
 .contact .addr{white-space:pre-line;font-size:17px;line-height:1.7;margin:18px 0 30px}
 .contact .mail{font-weight:600;color:var(--teal);border-bottom:2px solid var(--or)}
 .contact form{display:grid;gap:14px}
@@ -524,6 +524,7 @@ footer .bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;p
 .contact textarea{height:140px;resize:vertical}
 .contact button{justify-self:start;margin-top:10px;background:var(--teal);color:#fff;border:0;border-radius:40px;padding:15px 34px;font:600 12px Inter;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:.25s}
 .contact button:hover{background:var(--or)}
+.acard{border-top:1px solid #e3e8ea;padding:90px 0 120px;text-align:center}.acard h2{margin:10px 0 40px}.acard img{display:block;width:100%;max-width:860px;margin:0 auto;border-radius:6px;box-shadow:0 30px 60px -25px rgba(var(--deep-rgb),.45)}.acard .dl{display:inline-block;margin-top:34px;background:var(--teal);color:#fff;border-radius:40px;padding:15px 34px;font:600 12px Inter;letter-spacing:.18em;text-transform:uppercase;transition:background .2s}.acard .dl:hover{background:var(--or)}
 .note{font-size:13px;color:var(--mut)}
 @media(max-width:860px){.contact{grid-template-columns:1fr;gap:40px}.contact .two{grid-template-columns:1fr}}
 
@@ -671,7 +672,11 @@ footer .bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;p
         <input name="subject"><textarea name="message" required></textarea>
         <button type="submit" data-t="submit"></button><p class="note" id="cnote"></p>
       </form>
-    </div></div>
+    </div>
+    <div class="acard reveal"><span class="kick" data-t="autoKick"></span><h2 class="disp" data-t="autoTitle"></h2>
+      <img src="img/autogrammkarte.jpg" alt="Autogrammkarte Gian Andrea Stragiotti">
+      <a class="dl" href="img/autogrammkarte.jpg" download="Gian-Andrea-Stragiotti-Autogrammkarte.jpg" data-t="autoDl"></a></div>
+    </div>
   </section>
 </main>
 
@@ -683,8 +688,8 @@ footer .bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;p
 
 <script>
 const T={
- en:{lines:["Swiss Kiteboarder","European Champion <b>2026</b> · Vice World Champion <b>2026</b>","Road to LA 2028"],home:"Home",news:"News",press:"In the media",pressKick:"Press & TV",latest:"Latest updates",allnews:"All news",about:"About",gear:"Gear",competition:"Competition",partners:"Partners",contact:"Contact",lang:"DE",results:"Results",submit:"Send message",follow:"Follow me",sub:"European Champion 2026 · Vice World Champion 2026 · 4x Youth World Champion · Formula Kite",gearKick:"My equipment",compKick:"Calendar & results",thanks:"Thank you to my partners",getInTouch:"Get in touch",visit:"Visit website",ph:{name:"Name",mail:"E-mail",subject:"Subject",message:"Message"},sent:"Your mail app opens with the message. If not, write to: "},
- de:{lines:["Swiss Kiteboarder","Europameister <b>2026</b> · Vize-Weltmeister <b>2026</b>","Road to LA 2028"],home:"Home",news:"News",press:"In den Medien",pressKick:"Presse & TV",latest:"Neuigkeiten",allnews:"Alle News",about:"Über Mich",gear:"Material",competition:"Wettkämpfe",partners:"Partner",contact:"Kontakt",lang:"EN",results:"Resultate",submit:"Nachricht senden",follow:"Folge mir",sub:"Europameister 2026 · Vize-Weltmeister 2026 · 4x Jugendweltmeister · Formula Kite",gearKick:"Mein Material",compKick:"Kalender & Resultate",thanks:"Danke an meine Partner",getInTouch:"Schreib mir",visit:"Zur Website",ph:{name:"Name",mail:"E-Mail",subject:"Betreff",message:"Nachricht"},sent:"Dein Mailprogramm öffnet sich mit der Nachricht. Falls nicht, schreib an: "}
+ en:{autoKick:"For you",autoTitle:"Autograph card",autoDl:"Download",lines:["Swiss Kiteboarder","European Champion <b>2026</b> · Vice World Champion <b>2026</b>","Road to LA 2028"],home:"Home",news:"News",press:"In the media",pressKick:"Press & TV",latest:"Latest updates",allnews:"All news",about:"About",gear:"Gear",competition:"Competition",partners:"Partners",contact:"Contact",lang:"DE",results:"Results",submit:"Send message",follow:"Follow me",sub:"European Champion 2026 · Vice World Champion 2026 · 4x Youth World Champion · Formula Kite",gearKick:"My equipment",compKick:"Calendar & results",thanks:"Thank you to my partners",getInTouch:"Get in touch",visit:"Visit website",ph:{name:"Name",mail:"E-mail",subject:"Subject",message:"Message"},sent:"Your mail app opens with the message. If not, write to: "},
+ de:{autoKick:"Für dich",autoTitle:"Autogrammkarte",autoDl:"Herunterladen",lines:["Swiss Kiteboarder","Europameister <b>2026</b> · Vize-Weltmeister <b>2026</b>","Road to LA 2028"],home:"Home",news:"News",press:"In den Medien",pressKick:"Presse & TV",latest:"Neuigkeiten",allnews:"Alle News",about:"Über Mich",gear:"Material",competition:"Wettkämpfe",partners:"Partner",contact:"Kontakt",lang:"EN",results:"Resultate",submit:"Nachricht senden",follow:"Folge mir",sub:"Europameister 2026 · Vize-Weltmeister 2026 · 4x Jugendweltmeister · Formula Kite",gearKick:"Mein Material",compKick:"Kalender & Resultate",thanks:"Danke an meine Partner",getInTouch:"Schreib mir",visit:"Zur Website",ph:{name:"Name",mail:"E-Mail",subject:"Betreff",message:"Nachricht"},sent:"Dein Mailprogramm öffnet sich mit der Nachricht. Falls nicht, schreib an: "}
 };
 const PAGES=["home","about","competition","news","partners","contact"];
 const ICONS={
