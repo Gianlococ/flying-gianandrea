@@ -645,11 +645,6 @@ footer .bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;p
     <div class="slider full" data-slides="about.slider"></div>
   </section>
 
-  <!-- GEAR -->
-  <section class="page" id="p-gear">
-    <div class="phero" data-hdr="gear"><div class="wrap"><span class="kick" data-t="gearKick"></span><h1 class="disp" data-t="gear"></h1></div></div>
-    <div class="wrap" id="gear"></div><div class="gear-end"></div>
-  </section>
 
   <!-- COMPETITION -->
   <section class="page" id="p-competition">
@@ -692,7 +687,7 @@ const T={
  en:{lines:["Swiss Kiteboarder","European Champion <b>2026</b> · Vice World Champion <b>2026</b>","Road to LA 2028"],home:"Home",news:"News",press:"In the media",pressKick:"Press & TV",latest:"Latest updates",allnews:"All news",about:"About",gear:"Gear",competition:"Competition",partners:"Partners",contact:"Contact",lang:"DE",results:"Results",submit:"Send message",follow:"Follow me",sub:"European Champion 2026 · Vice World Champion 2026 · 4x Youth World Champion · Formula Kite",gearKick:"My equipment",compKick:"Calendar & results",thanks:"Thank you to my partners",getInTouch:"Get in touch",visit:"Visit website",ph:{name:"Name",mail:"E-mail",subject:"Subject",message:"Message"},sent:"Your mail app opens with the message. If not, write to: "},
  de:{lines:["Swiss Kiteboarder","Europameister <b>2026</b> · Vize-Weltmeister <b>2026</b>","Road to LA 2028"],home:"Home",news:"News",press:"In den Medien",pressKick:"Presse & TV",latest:"Neuigkeiten",allnews:"Alle News",about:"Über Mich",gear:"Material",competition:"Wettkämpfe",partners:"Partner",contact:"Kontakt",lang:"EN",results:"Resultate",submit:"Nachricht senden",follow:"Folge mir",sub:"Europameister 2026 · Vize-Weltmeister 2026 · 4x Jugendweltmeister · Formula Kite",gearKick:"Mein Material",compKick:"Kalender & Resultate",thanks:"Danke an meine Partner",getInTouch:"Schreib mir",visit:"Zur Website",ph:{name:"Name",mail:"E-Mail",subject:"Betreff",message:"Nachricht"},sent:"Dein Mailprogramm öffnet sich mit der Nachricht. Falls nicht, schreib an: "}
 };
-const PAGES=["home","about","competition","news","partners","gear","contact"];
+const PAGES=["home","about","competition","news","partners","contact"];
 const ICONS={
  home:'<path d="M12 3 1 12h3v9h6v-6h4v6h6v-9h3z"/>',
  birthday:'<path d="M5 13h14a2 2 0 0 1 2 2v6H3v-6a2 2 0 0 1 2-2zm1-4h2v3H6zm5 0h2v3h-2zm5 0h2v3h-2zM7 4.5c0 1-1 1.5-1 2.5a1 1 0 0 0 2 0c0-1-1-1.5-1-2.5zm5 0c0 1-1 1.5-1 2.5a1 1 0 0 0 2 0c0-1-1-1.5-1-2.5zm5 0c0 1-1 1.5-1 2.5a1 1 0 0 0 2 0c0-1-1-1.5-1-2.5z"/>',
@@ -756,7 +751,6 @@ function render(){
   $("aboutpic").innerHTML=`<img src="${esc(SITE.about.image)}" alt="Gian Andrea Stragiotti">`;
   $("facts").innerHTML=SITE.about.facts.map(f=>`<div class="fact reveal"><svg viewBox="0 0 24 24">${ICONS[f.icon]||""}</svg><div class="t">${esc(pick(f.text)).replace(/\n/g,"<br>")}</div></div>`).join("");
 
-  $("gear").innerHTML=SITE.gear.map(g=>`<div class="gcat"><div class="shead reveal"><h2 class="disp">${esc(g.cat)}</h2></div><div class="gitems">${g.items.map(i=>`<div class="gitem reveal"><div class="im"><img src="${esc(i.img)}" alt="${esc(i.name)}" loading="lazy"></div><span>${esc(i.name)}</span></div>`).join("")}</div></div>`).join("");
 
   $("caltitle").textContent=pick(SITE.calendarTitle);
   $("cal").innerHTML=SITE.calendar.map(([d,e])=>`<div class="crow reveal"><div class="d">${esc(d)}</div><div class="e">${esc(e)}</div></div>`).join("");
@@ -792,7 +786,7 @@ function slots(){
   add("Titelbild Startseite (gross)","Quer, sehr breit",()=>SITE.heroImage);
   SITE.homeSlider.forEach((x,i)=>add(`Startseite Foto-Slider ${i+1}/${SITE.homeSlider.length}`,"Quer",()=>SITE.homeSlider[i]));
   sec("Header-Bilder der Unterseiten");
-  [["news","News"],["about","About / Über mich"],["gear","Material"],["competition","Wettkämpfe"],["partners","Partner"]].forEach(([k,n])=>add(`Header ${n}`,"Quer, breit",()=>SITE.pageHeaders[k]));
+  [["news","News"],["about","About / Über mich"],["competition","Wettkämpfe"],["partners","Partner"]].forEach(([k,n])=>add(`Header ${n}`,"Quer, breit",()=>SITE.pageHeaders[k]));
   add("Header Kontakt","Quer, breit",()=>SITE.contact.image);
   sec("About");
   add("Porträt About","Hoch",()=>SITE.about.image);
@@ -804,7 +798,6 @@ function slots(){
   sec("Instagram-Raster (optional)");
   SITE.instagram.forEach((x,i)=>add(`Instagram ${i+1}/${SITE.instagram.length}`,"Quadrat",()=>SITE.instagram[i].img||SITE.instagram[i]));
   sec("Material (optional, Produktbilder)");
-  SITE.gear.forEach(g=>g.items.forEach(it=>add(`${g.cat}: ${it.name}`,"Freigestellt, weisser Hintergrund",()=>it.img)));
   let n=0;
   $("slots").innerHTML=S.map(s=>s.sec?`<div class="slot sec">${esc(s.sec)}</div>`:`<div class="slot"><span class="no">${++n}</span><img src="${esc(s.get())}" alt="" loading="lazy"><div class="lb">${esc(s.label)}<small>${esc(s.hint)}</small></div></div>`).join("");
 }
